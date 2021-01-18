@@ -56,8 +56,24 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int value = 7;
+    int amount = 33;
     
+    char symbol = "@";
+    char letter = "a";
+    char digit = "0";
 
+    bool status = true;
+    bool flag = false;
+    bool exit = true;
+
+    float length = 3.5;
+    float width = 8.123;
+    float depth = 1.99
+
+    double revenue = 100.00001;
+    double credit = -300.43234;
+    double debt = 1000.34 
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 }
