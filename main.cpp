@@ -59,9 +59,9 @@ void variableDeclarations()
     int value = 7;
     int amount = 33;
     
-    char symbol = "@";
-    char letter = "a";
-    char digit = "0";
+    const char symbol = "@";
+    const char letter = "a";
+    const char digit = "0";
 
     bool status = true;
     bool flag = false;
@@ -69,13 +69,13 @@ void variableDeclarations()
 
     float length = 3.5;
     float width = 8.123;
-    float depth = 1.99
+    float depth = 1.99;
 
     double revenue = 100.00001;
     double credit = -300.43234;
-    double debt = 1000.34 
+    double debt = 1000.34;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(numb, value, amount, symbol, letter, digit, status, flag, exit, length, width, depth, revenue, credit, debter); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
