@@ -14,13 +14,13 @@ video: Chapter 2 - Part 3
  This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
  
  
- 1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
+1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
- 
- 
- 
- 
- 
+//int 
+//char
+//bool
+//float 
+//double 
  
  
  
@@ -56,10 +56,26 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int value = 7;
+    int amount = 33;
     
+    char symbol = '@';
+    char letter = 'a';
+    char digit = '0';
 
+    bool status = true;
+    bool flag = false;
+    bool exit = true;
+
+    float length = 3.5f;
+    float width = 8.1f;
+    float depth = 1.9f;
+
+    double revenue = 100.00001;
+    double credit = -300.43234;
+    double debt = 1000.34;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, value, amount, symbol, letter, digit, status, flag, exit, length, width, depth, revenue, credit, debt); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -75,42 +91,79 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+void displayNumber(int number = 0)
+{
+    ignoreUnused(number);
+}
 /*
  2)
  */
-
+bool setFlag(bool flag, int value = 10)
+{
+    ignoreUnused(flag, value);
+    return {};
+}
 /*
  3)
  */
-
+bool readFlag(char name = 'z', bool status = 1)
+{
+    ignoreUnused(name, status);
+    return {};
+}
+    
 /*
  4)
  */
-
+float divideNumbers(int numberOne, int numberTwo = 0)
+{
+    ignoreUnused(numberOne, numberTwo);
+    return {};
+}
 /*
  5)
  */
-
+int selectNumber(int numberOne, int numberTwo, int numberThree = 4, int numberNine = 9)
+{
+    ignoreUnused(numberOne, numberTwo, numberThree, numberNine);
+    return {};
+}
 /*
  6)
  */
-
+bool checkArgs(char arg1, bool arg2, int arg3)
+{
+    ignoreUnused(arg1, arg2, arg3);
+    return {};
+}
 /*
  7)
  */
-
+int setPlayerID(char name, double height, char hairColor, bool gender = 0)
+{
+    ignoreUnused(height, hairColor, gender, name);
+    return {};
+}
 /*
  8)
  */
-
+void playSomeSound(int note = 12)
+{
+    ignoreUnused(note);
+}
 /*
  9)
  */
-
+bool guessWho (char name)
+{
+    ignoreUnused(name);
+    return {};
+}
 /*
  10)
  */
+void sayBye()
+{}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -132,27 +185,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    displayNumber(33);
     
     //2)
+    auto flag = setFlag(false, 1);
     
     //3)
+    auto currentStatus = readFlag();
     
     //4)
+    auto result = divideNumbers(22, 7);
     
     //5)
+    auto topOf = selectNumber(1, 2, 3, 4);
     
     //6)
+    auto isArgsCorrect = checkArgs(true, 'a', 20);
     
     //7)
-    
+    auto playerID = setPlayerID('O', 1.78, 'B');
     //8)
+    playSomeSound(5);
+    playSomeSound(7);
+    playSomeSound(3);
     
     //9)
+    auto me = guessWho('O');
     
     //10)
+    sayBye();
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, flag, currentStatus, result, topOf, isArgsCorrect, playerID, me);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
