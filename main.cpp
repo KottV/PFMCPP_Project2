@@ -67,9 +67,9 @@ void variableDeclarations()
     bool flag = false;
     bool exit = true;
 
-    float length = 3.5;
-    float width = 8.1;
-    float depth = 1.9;
+    float length = 3.5f;
+    float width = 8.1f;
+    float depth = 1.9f;
 
     double revenue = 100.00001;
     double credit = -300.43234;
