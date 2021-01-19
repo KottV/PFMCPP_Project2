@@ -68,8 +68,8 @@ void variableDeclarations()
     bool exit = true;
 
     float length = 3.5;
-    float width = 8.123;
-    float depth = 1.99;
+    float width = 8.1;
+    float depth = 1.9;
 
     double revenue = 100.00001;
     double credit = -300.43234;
@@ -139,7 +139,7 @@ bool checkArgs(char arg1, bool arg2, int arg3)
 /*
  7)
  */
-int setPlayerID(char name, float height, char hairColor, bool gender = 0)
+int setPlayerID(char name, double height, char hairColor, bool gender = 0)
 {
     ignoreUnused(height, hairColor, gender, name);
     return {};
